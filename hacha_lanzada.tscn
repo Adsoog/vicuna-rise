@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjrikhmc7xstl"]
+
+[ext_resource type="Script" uid="uid://sunethmgvytk" path="res://scripts/hacha_lanzada.gd" id="1_6cgtv"]
+[ext_resource type="Texture2D" uid="uid://52mmt5ugxswq" path="res://sprites/weapons/tile_0009.png" id="1_lw87u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cgtv"]
+
+[node name="HachaLanzada" type="Area2D" unique_id=1225098065]
+script = ExtResource("1_6cgtv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=216593682]
+texture = ExtResource("1_lw87u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994037946]
+shape = SubResource("RectangleShape2D_6cgtv")
