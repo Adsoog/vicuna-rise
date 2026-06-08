@@ -9,6 +9,7 @@ var spawn_radius = 450.0
 var min_spawn_time = 0.2
 var difficulty_rate = 0.02
 
+
 func _ready():
 	call_deferred("find_player")
 

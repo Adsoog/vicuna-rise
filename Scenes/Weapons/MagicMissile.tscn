@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bgq8r46bj01jt"]
+
+[ext_resource type="Script" uid="uid://cypunbqmp2510" path="res://Scenes/Weapons/magic_missile.gd" id="1_hck05"]
+[ext_resource type="Texture2D" uid="uid://dutl4lym8ppek" path="res://sprites/weapons/knife/tile_0018.png" id="2_e4str"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4vwa"]
+size = Vector2(11, 19)
+
+[node name="MagicMissile" type="Area2D" unique_id=878817912]
+script = ExtResource("1_hck05")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852838837]
+texture = ExtResource("2_e4str")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=880907593]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h4vwa")
+
+[node name="Timer" type="Timer" parent="." unique_id=1549960964]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

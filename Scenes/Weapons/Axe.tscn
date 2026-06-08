@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dp70ml3eh05qt"]
+
+[ext_resource type="Script" uid="uid://dd02c4p7nciee" path="res://Scenes/Weapons/axe.gd" id="1_x27a8"]
+[ext_resource type="Texture2D" uid="uid://52mmt5ugxswq" path="res://sprites/weapons/tile_0009.png" id="2_wqajm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4vwa"]
+size = Vector2(11, 19)
+
+[node name="Axe" type="Area2D" unique_id=878817912]
+script = ExtResource("1_x27a8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852838837]
+texture = ExtResource("2_wqajm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=880907593]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h4vwa")
+
+[node name="Timer" type="Timer" parent="." unique_id=1549960964]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

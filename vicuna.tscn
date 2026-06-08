@@ -523,6 +523,12 @@ size = Vector2(24, 22)
 script = ExtResource("1_l5m8i")
 metadata/_edit_group_ = true
 
+[node name="BounceTimer" type="Timer" parent="." unique_id=964501259]
+autostart = true
+
+[node name="AxeTimer" type="Timer" parent="." unique_id=647173154]
+autostart = true
+
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1343572182]
 sprite_frames = SubResource("SpriteFrames_sg6r2")
 animation = &"idle_down"
@@ -539,4 +545,10 @@ autostart = true
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1787522630]
 position_smoothing_enabled = true
 
+[node name="MagicTimer" type="Timer" parent="." unique_id=1045521661]
+autostart = true
+
+[connection signal="timeout" from="BounceTimer" to="." method="_on_bounce_timer_timeout"]
+[connection signal="timeout" from="AxeTimer" to="." method="_on_axe_timer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="MagicTimer" to="." method="_on_magic_timer_timeout"]

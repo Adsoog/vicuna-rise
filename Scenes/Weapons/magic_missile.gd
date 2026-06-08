@@ -1,11 +1,13 @@
 extends Area2D
 
-var speed = 300.0
+var speed = 350.0
 var direction = Vector2.ZERO
-var lifetime = 1.2
+var rotation_speed = 15.0 
+var lifetime = 1.0
 
 func _process(delta):
 	position += direction * speed * delta
+	rotation += rotation_speed * delta
 	
 	lifetime -= delta
 	if lifetime <= 0:

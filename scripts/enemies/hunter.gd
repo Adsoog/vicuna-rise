@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D # Cambia el nombre si en tu escena se llama diferente (ej. $AnimatedSprite)
+@onready var animated_sprite = $AnimatedSprite2D
+
+var xp_scene = preload("res://Scenes/Items/XPItem.tscn")
 
 var player
 var speed = 75.0
@@ -17,15 +19,13 @@ func _physics_process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
-	# Si se está moviendo, actualizamos la dirección visual
 	if velocity.length() > 0:
 		update_direction_string(direction)
-		update_animation("run") # Si tus animaciones de correr se llaman "run_up", "run_down", etc.
+		update_animation("run")
 	else:
-		update_animation("idle") # Por si en algún momento se detiene
+		update_animation("idle")
 
 func update_direction_string(dir: Vector2):
-	# Determinamos si el movimiento es más horizontal o vertical
 	if abs(dir.x) > abs(dir.y):
 		if dir.x > 0:
 			last_direction = "right"
@@ -38,5 +38,10 @@ func update_direction_string(dir: Vector2):
 			last_direction = "up"
 
 func update_animation(state):
-	# Esto combina "run" o "idle" con la dirección actual (ej. "run_up")
 	animated_sprite.play(state + "_" + last_direction)
+
+func die():
+	var xp = xp_scene.instantiate()
+	get_parent().add_child(xp)
+	xp.global_position = global_position
+	queue_free()
