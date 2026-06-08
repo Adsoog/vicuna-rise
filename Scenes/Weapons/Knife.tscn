@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dlbo2rh3v1h2"]
+
+[ext_resource type="Script" uid="uid://yfdh8g0f7e5a" path="res://Scenes/Weapons/knife.gd" id="1_cd7ht"]
+[ext_resource type="Texture2D" uid="uid://dutl4lym8ppek" path="res://sprites/weapons/knife/tile_0018.png" id="2_7i0hc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4vwa"]
+size = Vector2(11, 19)
+
+[node name="Knive" type="Area2D" unique_id=878817912]
+script = ExtResource("1_cd7ht")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852838837]
+texture = ExtResource("2_7i0hc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=880907593]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h4vwa")
+
+[node name="Timer" type="Timer" parent="." unique_id=1549960964]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

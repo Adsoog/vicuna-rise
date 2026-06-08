@@ -532,3 +532,11 @@ frame_progress = 0.52544576
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=991700123]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_ncaxw")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=1829189556]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1787522630]
+position_smoothing_enabled = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
