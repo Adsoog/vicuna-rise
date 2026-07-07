@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://cvk7jstquoefu"]
-
-[ext_resource type="PackedScene" uid="uid://2oykuolvpoxg" path="res://vicuna.tscn" id="1_sg6r2"]
-
-[node name="Characters" type="Node2D" unique_id=2083264886]
-
-[node name="Vicuna" parent="." unique_id=758104195 instance=ExtResource("1_sg6r2")]
-position = Vector2(97, 64)

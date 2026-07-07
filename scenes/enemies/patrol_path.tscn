@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8patrol001"]
+
+[ext_resource type="Script" path="res://scripts/enemies/patrol_path.gd" id="1_ptr"]
+[ext_resource type="Script" path="res://scripts/enemies/patrol_hazard.gd" id="2_hzd"]
+[ext_resource type="Texture2D" path="res://sprites/weapons/knife/tile_0018.png" id="3_knf"]
+
+[sub_resource type="Curve2D" id="Curve2D_ptr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -200, -200, 0, 0, 0, 0, 200, -200, 0, 0, 0, 0, 200, 200, 0, 0, 0, 0, -200, 200, 0, 0, 0, 0, -200, -200)
+}
+point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ptr"]
+radius = 18.0
+
+[node name="PatrolPath" type="Path2D"]
+curve = SubResource("Curve2D_ptr")
+script = ExtResource("1_ptr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-200, -200)
+rotates = false
+
+[node name="Hazard" type="CharacterBody2D" parent="PathFollow2D" groups=["enemy"]]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("2_hzd")
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D/Hazard"]
+modulate = Color(1, 0.2, 0.2, 1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_knf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Hazard"]
+shape = SubResource("CircleShape2D_ptr")
+
+[node name="DamageArea" type="Area2D" parent="PathFollow2D/Hazard"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Hazard/DamageArea"]
+shape = SubResource("CircleShape2D_ptr")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dr0wr4vabdy3w"]
+
+[ext_resource type="Script" uid="uid://bplmsc7felx47" path="res://scripts/ui/main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://bneid8kubyd2f" path="res://sprites/background/ChatGPT Image Jun 8, 2026, 03_28_12 PM.png" id="2_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=2018998616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=138087465]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -319.0
+offset_right = 2138.2625
+offset_bottom = 3342.898
+grow_vertical = 2
+scale = Vector2(0.16890767, 0.17395352)
+texture = ExtResource("2_7vrkn")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="." unique_id=1778001473]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 460.0
+offset_right = 237.0
+offset_bottom = 491.0
+text = "INICIAR JUEGO
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

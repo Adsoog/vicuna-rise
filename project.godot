@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="inkarise"
+config/name="VicunaRise"
 run/main_scene="uid://dr0wr4vabdy3w"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -26,6 +26,7 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 player=""
+enemy=""
 
 [input]
 
