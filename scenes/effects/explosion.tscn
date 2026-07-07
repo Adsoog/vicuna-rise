@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8explosion01"]
+
+[ext_resource type="Script" path="res://scripts/effects/explosion.gd" id="1_exp"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_exp"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 40.0
+initial_velocity_max = 120.0
+gravity = Vector3(0, 98, 0)
+scale_min = 3.0
+scale_max = 6.0
+color = Color(0.15, 0.85, 1, 1)
+
+[node name="Explosion" type="GPUParticles2D"]
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_exp")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.85
+script = ExtResource("1_exp")

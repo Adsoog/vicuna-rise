@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Vicuna Rise es un juego de supervivencia inspirado en Vampire Survivors y ambientado en los diversos ecosistemas del Perú. El jugador toma el control de una vicuña, uno de los animales más emblemáticos de los Andes, cuya vida pacífica se ve amenazada por la actividad humana y la explotación de la fauna silvestre.
+Vicuna Rise es un juego de supervivencia inspirado y ambientado en los diversos ecosistemas del Perú. El jugador toma el control de una vicuña, uno de los animales más emblemáticos de los Andes, cuya vida pacífica se ve amenazada por la actividad humana y la explotación de la fauna silvestre.
 
 El objetivo principal del juego es sobrevivir a oleadas de enemigos mientras se exploran distintos escenarios inspirados en la geografía peruana. A través de una experiencia entretenida y desafiante, el proyecto busca generar conciencia sobre problemáticas reales como la caza furtiva, el tráfico de animales, la explotación de recursos naturales y la destrucción de hábitats.
 
@@ -16,7 +16,7 @@ Sin embargo, esta tranquilidad comienza a desaparecer cuando diferentes amenazas
 
 La vicuña se ve obligada a huir y defenderse para sobrevivir. En su recorrido encontrará herramientas, habilidades y artefactos inspirados en la cultura y biodiversidad peruana que le permitirán enfrentar los peligros que amenazan su existencia.
 
-Lo que comienza como una simple lucha por sobrevivir terminará convirtiéndose en una misión para proteger a toda la fauna del Perú.
+Lo que comienza como una simple lucha por sobrevivir terminará convirtiéndose en una misió   para proteger a toda la fauna del Perú.
 
 ---
 

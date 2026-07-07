@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://70a3801v2tg7"]
+
+[ext_resource type="Texture2D" uid="uid://dutl4lym8ppek" path="res://sprites/weapons/knife/tile_0018.png" id="1_htj4q"]
+[ext_resource type="Script" uid="uid://d1i5oby5vb73q" path="res://scripts/weapons/bouncer.gd" id="1_udi05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4vwa"]
+size = Vector2(11, 19)
+
+[node name="Bouncer" type="Area2D" unique_id=878817912]
+script = ExtResource("1_udi05")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852838837]
+texture = ExtResource("1_htj4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=880907593]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h4vwa")
+
+[node name="Timer" type="Timer" parent="." unique_id=1549960964]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
