@@ -2,11 +2,3 @@
 .godot/
 /android/
 .import/
-export.cfg
-export_presets.cfg
-
-# Build and exports
-exports/
-*.exe
-*.pck
-*.console.exe
